@@ -1,24 +1,27 @@
-# README
+# Patient Zero API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Patient Zero API is the API-only version of my [Patient Zero](https://github.com/jaimeluong/patient-zero) full-stack app, intended for use alongside the front-end located [here](https://github.com/jaimeluong/patient-zero-frontend).
 
-Things you may want to cover:
+This back-end API supports create, read, update, and delete operations on providers, patients, and appointments. All communication is accomplished through JSON across HTTP requests, with data stored in a PostgreSQL database. This API is also RESTful, meaning it conforms to the constraints of REST architectural style. The client, a user or other web app, can communicate with this app to receive and request data as requested.
 
-* Ruby version
+- **Ruby version:** 3.1.2
 
-* System dependencies
+- **Rails version:** 7.0.4.2
 
-* Configuration
+- **System/gem dependencies:** Ruby, Rails, PostgreSQL, rack-cors (to allow cross-origin resource sharing)
 
-* Database creation
+## Run application
 
-* Database initialization
+After cloning and starting API server, the app will be hosted on port 3000 at [localhost](http://localhost:3000/).
 
-* How to run the test suite
+```
+$ git clone git@github.com:jaimeluong/patient-zero-api.git
+$ cd patient-zero-api
+$ rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+You can interact with it using cURL, Postman, or any tool that can send HTTP requests.
 
-* Deployment instructions
+## Notes
 
-* ...
+- This is the back-end API for a front-end app built with React and Bootstrap to render data and webpage content.
