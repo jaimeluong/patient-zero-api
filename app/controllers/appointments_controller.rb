@@ -11,11 +11,10 @@ class AppointmentsController < ApplicationController
 
     def create
         @appointment = Appointment.create(
-            first_name: params[:first_name],
-            last_name: params[:last_name],
-            age: params[:age],
-            sex: params[:sex],
-            medical_notes: params[:medical_notes]
+            start_date: params[:start_date],
+            end_date: params[:end_date],
+            category: params[:category],
+            description: params[:description]
         )
         render json: @appointment
     end
@@ -23,11 +22,10 @@ class AppointmentsController < ApplicationController
     def update
         @appointment = Appointment.find(params[:id])
         @appointment.update(
-            first_name: params[:first_name],
-            last_name: params[:last_name],
-            age: params[:age],
-            sex: params[:sex],
-            medical_notes: params[:medical_notes]
+            start_date: params[:start_date],
+            end_date: params[:end_date],
+            category: params[:category],
+            description: params[:description]
         )
         render json: @appointment
     end
